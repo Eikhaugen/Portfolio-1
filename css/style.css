@@ -71,46 +71,6 @@ h1{
     font-size: 1.25rem;
 }
 
-.gradient-border {
-    --borderWidth: 3px;
-    background: rgba(9, 9, 9, 0.95);
-    position: relative;
-    border-radius: var(--borderWidth);
-
-}
-
-.gradient-border:hover{
-    background: rgba(9, 9, 9, 0.8);
-    transition: 0.5s;
-    height: calc(100% + var(--borderWidth) * 2);
-}
-
-.gradient-border:after {
-    content: '';
-    position: absolute;
-    top: calc(-1 * var(--borderWidth));
-    left: calc(-1 * var(--borderWidth));
-    height: calc(100% + var(--borderWidth) * 2);
-    width: calc(100% + var(--borderWidth) * 2);
-    background: linear-gradient(60deg, rgba(247, 149, 51, 0.9), rgba(243, 112, 85, 0.9), rgba(239, 78, 123, 0.9), rgba(161, 102, 171, 0.9), #5073b8, #1098ad, #07b39b, #6fba82);
-    border-radius: calc(2 * var(--borderWidth));
-    z-index: -1;
-    animation: animatedgradient 3s ease alternate infinite;
-    background-size: 300% 300%;
-}
-
-@keyframes animatedgradient {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
-}
-
 .bg-animation {
     position: absolute;
     width: 100%;
@@ -249,6 +209,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 nav li{
@@ -269,6 +230,8 @@ nav a{
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 32px;
 }
 
@@ -279,27 +242,71 @@ nav a{
 #techStack{
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    position: relative;
+    gap: 16px;
+    padding: 32px;
 }
 
-#techStackIcons{
+#techStack h2{
+    font-size: 24px;
+}
+
+#techStackContainer{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 32px;
-    max-width: 500px;
 }
 
-#techStackIcons img{
+.techStackItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+    transition: 0.5s;
+    height: fit-content;
+    width: fit-content;
+    background: #393939;
+    padding: 2px 8px;
+
+}
+
+.techStackItem img{
     width: 80px;
     height: 80px;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.techStackItem span{
+    width: 100px;
+    text-align: center;
 }
 
 #projects{
     background: #393939;
     height: fit-content;
-    width: 100vw;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 32px;
+}
+
+#projectsContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#projectsContent h2{
+    font-size: 24px;
 }
 
 .project{
@@ -317,6 +324,7 @@ nav a{
     justify-content: center;
     align-items: center;
 }
+
 .projectContent{
     display: flex;
     justify-content: center;
@@ -332,9 +340,86 @@ nav a{
     align-items: center;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 700px){
     nav{
         justify-content: end;
         padding-right: 32px;
     }
+
+    #techStackContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.gradient-border{
+    --borderWidth: 3px;
+    background: rgba(9, 9, 9, 0.95);
+    position: relative;
+    border-radius: var(--borderWidth);
+
+}
+
+.gradient-border:hover{
+    background: rgba(9, 9, 9, 0.8);
+    transition: 0.5s;
+    height: calc(100% + var(--borderWidth) * 2);
+}
+
+.gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, rgba(247, 149, 51, 0.9), rgba(243, 112, 85, 0.9), rgba(239, 78, 123, 0.9), rgba(161, 102, 171, 0.9), #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.techStackGradientBorder{
+        --borderWidth: 3px;
+        position: relative;
+        border-radius: var(--borderWidth);
+        z-index: 0;
+    }
+
+.techStackGradientBorder:after {
+        content: '';
+        position: absolute;
+        top: calc(-1 * var(--borderWidth));
+        left: calc(-1 * var(--borderWidth));
+        height: calc(100% + var(--borderWidth) * 2);
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(60deg, rgba(247, 149, 51, 1), rgb(243, 112, 85), rgb(239, 78, 123), rgb(161, 102, 171), #5073b8, #1098ad, #07b39b, #6fba82);
+        border-radius: calc(2 * var(--borderWidth));
+        animation: animatedgradient 8s ease alternate infinite;
+        background-size: 300% 300%;
+        z-index: -1;
+}
+
+@keyframes animatedgradient {
+        0% {
+            background-position: 0 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
 }
