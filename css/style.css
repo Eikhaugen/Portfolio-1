@@ -41,13 +41,13 @@ body {
 }
 
 h1{
-    font-size: 3.5rem;
+    font-size: 1.725rem;
     font-weight: 700;
     text-align: center;
 }
 
 #heroContent p{
-    font-size: 3rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -61,21 +61,28 @@ h1{
     justify-content: center;
     width: fit-content;
     height: fit-content;
-    font-size: 2.5rem;
+    font-size: 1.25rem;
     cursor: pointer;
     pointer-events: visible;
 }
 
 .viewWorkBTN i{
     padding-left: 12px;
-    font-size: 2rem;
+    font-size: 1.25rem;
 }
 
 .gradient-border {
     --borderWidth: 3px;
-    background: #090909;
+    background: rgba(9, 9, 9, 0.95);
     position: relative;
     border-radius: var(--borderWidth);
+
+}
+
+.gradient-border:hover{
+    background: rgba(9, 9, 9, 0.8);
+    transition: 0.5s;
+    height: calc(100% + var(--borderWidth) * 2);
 }
 
 .gradient-border:after {
@@ -85,7 +92,7 @@ h1{
     left: calc(-1 * var(--borderWidth));
     height: calc(100% + var(--borderWidth) * 2);
     width: calc(100% + var(--borderWidth) * 2);
-    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    background: linear-gradient(60deg, rgba(247, 149, 51, 0.9), rgba(243, 112, 85, 0.9), rgba(239, 78, 123, 0.9), rgba(161, 102, 171, 0.9), #5073b8, #1098ad, #07b39b, #6fba82);
     border-radius: calc(2 * var(--borderWidth));
     z-index: -1;
     animation: animatedgradient 3s ease alternate infinite;
@@ -110,6 +117,7 @@ h1{
     height: 100%;
     overflow: hidden;
     pointer-events: none;
+    z-index: -2;
 }
 
 #stars {
@@ -239,15 +247,20 @@ nav{
     position: sticky;
     top: 0;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
-    padding-right: 32px;
 }
 
 nav li{
     list-style: none;
     display: inline;
-    padding: 20px;
+    padding: 0 8px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
 }
 
 #about{
@@ -317,4 +330,11 @@ nav li{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width: 768px){
+    nav{
+        justify-content: end;
+        padding-right: 32px;
+    }
 }
