@@ -232,7 +232,7 @@ nav a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 32px;
+    padding: 60px 32px 0 32px;
 }
 
 #about p{
@@ -286,7 +286,7 @@ nav a{
     text-align: center;
 }
 
-#projects{
+#projectsSection{
     background: #393939;
     height: fit-content;
     width: 100%;
@@ -294,10 +294,10 @@ nav a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 32px;
+    padding: 60px 32px 0 32px;
 }
 
-#projectsContent{
+#projectsContainer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,18 +305,21 @@ nav a{
     gap: 16px;
 }
 
-#projectsContent h2{
+#projectsContainer h2{
     font-size: 24px;
 }
 
 .project{
     display: flex;
     flex-direction: column;
+}
 
+.project h3{
+    font-size: 1.5rem;
 }
 
 .projectImageDesktop{
-    width: 250px;
+    width: 100%;
 }
 
 .projectImageContainer{
@@ -325,19 +328,41 @@ nav a{
     align-items: center;
 }
 
-.projectContent{
+.projectDetails{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
+}
+
+.projectDetails p{
+    width: 100%;
+}
+
+.projectLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+
+.projectLinks a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 #contact {
     background: #8c8c8c;
     height: 1000px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 60px 32px 0 32px;
 }
 
 @media screen and (min-width: 700px){
@@ -360,7 +385,7 @@ nav a{
 }
 
 .gradient-border:hover{
-    background: rgba(9, 9, 9, 0.8);
+    background: rgba(9, 9, 9, 0.7);
     transition: 0.5s;
     height: calc(100% + var(--borderWidth) * 2);
 }
