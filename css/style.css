@@ -251,7 +251,6 @@ nav a{
 #aboutContainer{
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0 32px;
     gap: 16px;
 }
 
@@ -270,7 +269,6 @@ nav a{
     flex-direction: column;
     position: relative;
     gap: 16px;
-    padding: 0 32px;
 }
 
 #techStack h2{
@@ -472,18 +470,26 @@ nav a{
     #aboutContainer{
         grid-template-columns: 1fr 1fr;
         gap: 0;
+        padding: 0 32px;
+    }
+
+    #techStack{
+        padding: 0 32px;
     }
 
     #projectsContainer{
         gap: 64px;
     }
+
     .project{
         grid-template-columns: 3fr 2fr;
         gap: 32px;
     }
+
     .project:nth-child(odd){
         grid-template-columns: 2fr 3fr;
     }
+
     .reverse{
         order: 1;
     }
