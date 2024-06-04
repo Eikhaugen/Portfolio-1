@@ -202,7 +202,7 @@ h1{
 }
 
 nav{
-    background: #1e1e1e;
+    background: #393939;
     height: 60px;
     width: 100%;
     position: sticky;
@@ -226,30 +226,39 @@ nav a{
 }
 
 #about{
-    background: #393939;
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: fit-content;
-    align-items: start;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
     padding: 60px 32px 0 32px;
     gap: 32px;
 }
 
 #about h2{
-    font-size: 24px;
+    font-size: 1.5rem;
+}
+#about h3{
+    font-size: 1.25rem;
 }
 
 #about p{
     width: 100%;
 }
 
+#aboutContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 32px;
+    gap: 16px;
+}
+
 #aboutContent{
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 32px;
     gap: 16px;
 }
 
@@ -283,7 +292,7 @@ nav a{
     transition: 0.5s;
     height: fit-content;
     width: fit-content;
-    background: #393939;
+    background: #1e1e1e;
     padding: 2px 8px;
 
 }
@@ -301,14 +310,14 @@ nav a{
 }
 
 #projectsSection{
-    background: #393939;
+    background: #1e1e1e;
     height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 32px 0 32px;
+    padding: 60px 32px 32px 32px;
 }
 
 #projectsContainer{
@@ -326,8 +335,16 @@ nav a{
 .project{
     display: grid;
     grid-template-columns: 1fr;
+    border: 1px solid #393939;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
 }
 
+.project li{
+    margin-left: 20px;
+
+}
 
 .project h3{
     font-size: 1.5rem;
@@ -335,12 +352,9 @@ nav a{
 
 .projectImageDesktop{
     width: 100%;
-}
+    max-width: 900px;
+    border-radius: 5px;
 
-.projectImageContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .projectDetails{
@@ -348,7 +362,7 @@ nav a{
     align-items: start;
     flex-direction: column;
     gap: 8px;
-    padding: 16px 0;
+    padding: 16px;
 }
 
 .projectDetails p{
@@ -371,13 +385,18 @@ nav a{
 }
 
 #contact {
-    background: #8c8c8c;
+    background: #1e1e1e;
     height: 1000px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 60px 32px 0 32px;
+}
+
+#aboutContainer, #projectsContainer, #contactContent{
+    width: 100%;
+    max-width: 1440px;
 }
 
 .gradient-border{
@@ -450,20 +469,28 @@ nav a{
 }
 
 @media screen and (min-width: 900px){
-    #about{
+    #aboutContainer{
         grid-template-columns: 1fr 1fr;
         gap: 0;
     }
 
-    #techStackContainer{
-        grid-template-columns: repeat(3, 1fr);
+    #projectsContainer{
+        gap: 64px;
     }
-
     .project{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 3fr 2fr;
         gap: 32px;
+    }
+    .project:nth-child(odd){
+        grid-template-columns: 2fr 3fr;
     }
     .reverse{
         order: 1;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #techStackContainer{
+        grid-template-columns: repeat(3, 1fr);
     }
 }
