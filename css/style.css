@@ -450,8 +450,8 @@ nav a{
     }
 }
 
-@media screen and (min-width: 1000px){
-    #aboutContent{
+@media screen and (min-width: 900px){
+    #about{
         flex-direction: row;
     }
 
