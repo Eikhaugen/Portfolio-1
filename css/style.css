@@ -314,7 +314,7 @@ nav a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 16px;
+    gap: 36px;
 }
 
 #projectsContainer h2{
@@ -322,9 +322,10 @@ nav a{
 }
 
 .project{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
 }
+
 
 .project h3{
     font-size: 1.5rem;
@@ -375,17 +376,6 @@ nav a{
     justify-content: center;
     align-items: center;
     padding: 60px 32px 0 32px;
-}
-
-@media screen and (min-width: 700px){
-    nav{
-        justify-content: end;
-        padding-right: 32px;
-    }
-
-    #techStackContainer{
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 .gradient-border{
@@ -447,4 +437,33 @@ nav a{
         animation: animatedgradient 8s ease alternate infinite;
         background-size: 300% 300%;
         z-index: -1;
+}
+
+@media screen and (min-width: 700px){
+    nav{
+        justify-content: end;
+        padding-right: 32px;
+    }
+
+    #techStackContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #aboutContent{
+        flex-direction: row;
+    }
+
+    #techStackContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project{
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+    .reverse{
+        order: 1;
+    }
 }
