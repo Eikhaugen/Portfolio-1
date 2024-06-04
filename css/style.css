@@ -228,12 +228,12 @@ nav a{
 #about{
     background: #393939;
     height: fit-content;
+    align-items: start;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
     padding: 60px 32px 0 32px;
+    gap: 32px;
 }
 
 #about h2{
@@ -249,6 +249,8 @@ nav a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0 32px;
+    gap: 16px;
 }
 
 #techStack{
@@ -259,7 +261,7 @@ nav a{
     flex-direction: column;
     position: relative;
     gap: 16px;
-    padding: 32px;
+    padding: 0 32px;
 }
 
 #techStack h2{
@@ -445,14 +447,12 @@ nav a{
         padding-right: 32px;
     }
 
-    #techStackContainer{
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 @media screen and (min-width: 900px){
     #about{
-        flex-direction: row;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
     }
 
     #techStackContainer{
