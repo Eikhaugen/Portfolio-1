@@ -233,7 +233,7 @@ nav a{
     align-items: center;
     height: fit-content;
     width: 100%;
-    padding: 60px 8px 60px 8px;
+    padding: 16px 8px 16px 8px;
     gap: 32px;
 
 }
@@ -251,20 +251,23 @@ nav a{
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
-    border: 1px solid #393939;
-    background: #333;
-    padding: 10px;
-    border-radius: 5px;
+
+
 }
 
 #aboutContent{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    border: 1px solid #393939;
+    background: #333;
+    padding: 16px;
+    border-radius: 5px;
 }
 
 #techStack{
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -289,7 +292,6 @@ nav a{
     width: fit-content;
     background: #1e1e1e;
     padding: 2px 8px;
-
 }
 
 .techStackItem img{
@@ -312,7 +314,7 @@ nav a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 8px 32px 8px;
+    padding: 16px 8px 16px 8px;
 }
 
 #projectsContainer{
@@ -540,7 +542,7 @@ nav a{
         padding: 60px 32px 32px 32px;
     }
     #about{
-        padding: 60px 32px 60px 32px;
+        padding: 32px 32px 32px 32px;
     }
 
 }
@@ -548,7 +550,6 @@ nav a{
 @media screen and (min-width: 900px){
     #aboutContainer{
         grid-template-columns: 1fr 1fr;
-        padding: 16px 32px;
     }
 
     #projectsContainer{
@@ -571,7 +572,7 @@ nav a{
     #contactContainer{
         grid-template-columns: 1fr 1fr;
         gap: 32px;
-        padding: 32px;
+        padding: 16px;
     }
 
 }
