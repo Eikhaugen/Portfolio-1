@@ -52,7 +52,7 @@ h1{
     text-align: center;
 }
 
-.viewWorkBTN{;
+.viewWorkBTN{
     color: white;
     padding: 10px 20px;
     margin-top: 20px;
@@ -233,7 +233,7 @@ nav a{
     align-items: center;
     height: fit-content;
     width: 100%;
-    padding: 60px 32px 0 32px;
+    padding: 60px 32px 32px 32px;
     gap: 32px;
 }
 
@@ -251,7 +251,7 @@ nav a{
 #aboutContainer{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 32px;
 }
 
 #aboutContent{
@@ -264,8 +264,9 @@ nav a{
 #techStack{
     width: 100%;
     display: flex;
-    justify-content: center;
+
     align-items: center;
+
     flex-direction: column;
     position: relative;
     gap: 16px;
@@ -344,10 +345,6 @@ nav a{
 
 }
 
-.project h3{
-    font-size: 1.5rem;
-}
-
 .projectImageDesktop{
     width: 100%;
     max-width: 900px;
@@ -382,17 +379,58 @@ nav a{
     font-weight: bold;
 }
 
-#contact {
-    background: #1e1e1e;
-    height: 1000px;
-    width: 100%;
+#contactContainer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 60px 32px 0 32px;
+    gap: 16px;
 }
 
-#aboutContainer, #projectsContainer, #contactContent{
+#contactContainer p{
+    text-align: center;
+}
+
+#contactContainer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 450px;
+}
+
+#contactContainer form input, #contactContainer form textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #393939;
+    resize: none;
+    color: #393939;
+}
+
+.contactFormBTN{
+    color: white;
+    padding: 10px 20px;
+    background: rgba(30, 30, 30, 0.95);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    font-size: 1.25rem;
+    cursor: pointer;
+    pointer-events: visible;
+}
+
+.contactFormBTN:hover{
+    background: rgba(9, 9, 9, 0.7);
+    transition: 0.5s;
+}
+
+#aboutContainer, #projectsContainer{
     width: 100%;
     max-width: 1440px;
 }
@@ -438,10 +476,11 @@ nav a{
 }
 
 .techStackGradientBorder{
-        --borderWidth: 3px;
-        position: relative;
-        border-radius: var(--borderWidth);
-        z-index: 0;
+    --borderWidth: 3px;
+    position: relative;
+    border-radius: var(--borderWidth);
+    z-index: 0;
+    width: fit-content;
     }
 
 .techStackGradientBorder:after {
@@ -453,7 +492,7 @@ nav a{
         width: calc(100% + var(--borderWidth) * 2);
         background: linear-gradient(60deg, rgba(247, 149, 51, 1), rgb(243, 112, 85), rgb(239, 78, 123), rgb(161, 102, 171), #5073b8, #1098ad, #07b39b, #6fba82);
         border-radius: calc(2 * var(--borderWidth));
-        animation: animatedgradient 8s ease alternate infinite;
+        animation: animatedgradient 3s ease alternate infinite;
         background-size: 300% 300%;
         z-index: -1;
 }
@@ -493,9 +532,13 @@ nav a{
     .reverse{
         order: 1;
     }
+
+    #contactContainer p{
+    text-align: left;
+    }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1100px){
     #techStackContainer{
         grid-template-columns: repeat(3, 1fr);
     }
