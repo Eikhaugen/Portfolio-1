@@ -259,7 +259,6 @@ nav a{
 
 #aboutContent{
     display: flex;
-    align-items: center;
     flex-direction: column;
     gap: 16px;
 }
@@ -391,9 +390,9 @@ nav a{
 }
 
 #contactContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px 32px;
     border: 1px solid #393939;
     background: #333;
     padding: 10px;
@@ -412,14 +411,20 @@ nav a{
 #contactContainer h2{
     font-size: 1.5rem;
     width: 100%;
-    text-align: center;
 }
 
 #contactContainer p{
     text-align: left;
 }
 
-#contactContainer form{
+.formContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formContainer form{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -428,7 +433,7 @@ nav a{
     max-width: 450px;
 }
 
-#contactContainer form input, #contactContainer form textarea{
+.formContainer form input, .formContainer form textarea{
     width: 100%;
     padding: 5px;
     border-radius: 5px;
@@ -543,10 +548,8 @@ nav a{
 @media screen and (min-width: 900px){
     #aboutContainer{
         grid-template-columns: 1fr 1fr;
-        gap: 0;
         padding: 16px 32px;
     }
-
 
     #projectsContainer{
         gap: 64px;
@@ -566,7 +569,7 @@ nav a{
     }
 
     #contactContainer{
-        flex-direction: row;
+        grid-template-columns: 1fr 1fr;
         gap: 32px;
         padding: 32px;
     }
