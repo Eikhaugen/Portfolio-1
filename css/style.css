@@ -233,8 +233,9 @@ nav a{
     align-items: center;
     height: fit-content;
     width: 100%;
-    padding: 60px 32px 32px 32px;
+    padding: 60px 32px 60px 32px;
     gap: 32px;
+
 }
 
 #about h2{
@@ -250,6 +251,10 @@ nav a{
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
+    border: 1px solid #393939;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 #aboutContent{
@@ -257,6 +262,7 @@ nav a{
     align-items: center;
     flex-direction: column;
     gap: 16px;
+    padding: 8px;
 }
 
 #techStack{
@@ -359,7 +365,6 @@ nav a{
     width: 100%;
     display: flex;
     align-items: center;
-
     flex-direction: column;
     gap: 32px;
 }
@@ -379,6 +384,7 @@ nav a{
     font-size: 1.25rem;
     cursor: pointer;
     pointer-events: visible;
+    width: 145px;
 }
 
 .projectLinks a:hover{
@@ -390,6 +396,11 @@ nav a{
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    border: 1px solid #393939;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
 }
 
 #contactContainer p{
@@ -429,6 +440,7 @@ nav a{
     font-size: 1.25rem;
     cursor: pointer;
     pointer-events: visible;
+    width: 145px;
 }
 
 .contactFormBTN:hover{
@@ -518,7 +530,7 @@ nav a{
     }
 
     #techStack{
-        padding: 0 32px;
+        padding: 8px 32px;
     }
 
     #projectsContainer{
@@ -538,9 +550,6 @@ nav a{
         order: 1;
     }
 
-    #contactContainer p{
-    text-align: left;
-    }
 }
 
 @media screen and (min-width: 1000px){
