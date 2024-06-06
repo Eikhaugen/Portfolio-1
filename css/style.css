@@ -342,7 +342,7 @@ nav a{
     display: flex;
     align-items: start;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
     padding: 16px;
 }
 
@@ -358,17 +358,31 @@ nav a{
 .projectLinks{
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 64px;
-    font-size: 1.25rem
+
+    flex-direction: column;
+    gap: 32px;
 }
 
 .projectLinks a{
-    text-decoration: none;
     color: white;
+    padding: 10px 20px;
+    background: rgba(30, 30, 30, 0.95);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
     font-size: 1.25rem;
-    font-weight: bold;
+    cursor: pointer;
+    pointer-events: visible;
+}
+
+.projectLinks a:hover{
+    background-color: rgba(9, 9, 9, 0.7);
 }
 
 #contactContainer {
@@ -427,20 +441,20 @@ nav a{
     max-width: 1440px;
 }
 
-.gradient-border{
+.gradientBorderHero{
     --borderWidth: 3px;
     background: rgba(9, 9, 9, 0.95);
     position: relative;
     border-radius: var(--borderWidth);
 }
 
-.gradient-border:hover{
+.gradientBorderHero:hover{
     background: rgba(9, 9, 9, 0.7);
     transition: 0.5s;
     height: calc(100% + var(--borderWidth) * 2);
 }
 
-.gradient-border:after {
+.gradientBorderHero:after {
     content: '';
     position: absolute;
     top: calc(-1 * var(--borderWidth));
@@ -466,7 +480,7 @@ nav a{
     }
 }
 
-.techStackGradientBorder{
+.gradientBorder{
     --borderWidth: 3px;
     position: relative;
     border-radius: var(--borderWidth);
@@ -474,7 +488,7 @@ nav a{
     width: fit-content;
     }
 
-.techStackGradientBorder:after {
+.gradientBorder:after {
         content: '';
         position: absolute;
         top: calc(-1 * var(--borderWidth));

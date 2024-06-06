@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Thomas Eikhaugen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Thomas Eikhaugen - Frontend Developer Portfolio showcasing projects and skills in HTML, CSS, JavaScript, and Python.">
+    <meta name="keywords" content="Thomas Eikhaugen, Frontend Developer, HTML, CSS, JavaScript, Python, Portfolio">
+    <meta name="author" content="Thomas Eikhaugen">
+
     <link rel="stylesheet" href="css/style.css"><link>
     <script src="https://kit.fontawesome.com/84d9821b5f.js" crossorigin="anonymous"></script>
 </head>
@@ -12,7 +17,7 @@
         <div id="heroContent">
             <h1>Hi I'm Thomas Eikhaugen.</h1>
             <p>I'm a frontend developer</p>
-            <a class="viewWorkBTN gradient-border" href="#projectsSection" aria-label="go to projects section">View my work  <i class="fa-light fa-arrow-down" style="color: #ffffff;"></i></a>
+            <a class="viewWorkBTN gradientBorderHero" href="#projectsSection" aria-label="go to projects section">View my work  <i class="fa-light fa-arrow-down" style="color: #ffffff;"></i></a>
         </div>
         <div class="bg-animation">
             <div id="stars1"></div>
@@ -34,13 +39,17 @@
                         <img class="projectImageDesktop" src="assets/images/gh-desktop.png" alt="Screenshot of GameHub website">
                     <div class="projectDetails">
                         <h3>GameHub</h3>
-                        <p>This website is an e-commerce website, for a fictitious company called GameHub, that sells video games.</p>
-                        <p>This project was a course assignment, at the end of the HTML and CSS course in the first semester of Front End Development at Noroff School of Technology and Digital Media.</p>
-                        <p>The project was created using just HTML and CSS, and has limited functionality due to lack of javascript. Still I chose to showcase GameHub as this was my first project made with HTML and CSS.</p>
+                        <p>This website is an e-commerce website, for a company called GameHub, that sells video games.</p>
+                        <p>This project was a course assignment, at the end of the HTML and CSS course in the first semester of Front End Development at Noroff.</p>
+                        <p>The project was created using HTML and CSS, and has limited functionality due to lack of javascript. Still I chose to showcase GameHub as this was my first project made with HTML and CSS.</p>
                         <div class="projectLinks">
-                            <a href="https://preeminent-madeleine-86cefd.netlify.app/" aria-label="Go to the deployed website">Live Demo</a>
-                            <a href="https://github.com/Eikhaugen/CA-GameHub" aria-label="Go to project Github Repository">Learn More</a>
-                        </div>
+                            <div class="gradientBorder">
+                                <a href="https://preeminent-madeleine-86cefd.netlify.app/" aria-label="Go to the deployed website">Live Demo</a>
+                            </div>
+                            <div class="gradientBorder">
+                                <a href="https://github.com/Eikhaugen/CA-GameHub" aria-label="Go to project Github Repository">Learn More</a>
+                            </div>
+                            </div>
 
                 </div>
             </div>
@@ -48,24 +57,32 @@
                     <img class="projectImageDesktop reverse" src="assets/images/sm-desktop.png" alt="Screenshot of Science Museum website">
                     <div class="projectDetails">
                         <h3>Science Museum</h3>
-                        <p>The website is an information website for a fictitious museum.</p>
-                        <p>This project was the semester project, at the end of the first semester of Front End Development at Noroff School of Technology and Digital Media.</p>
+                        <p>The website is an information website for a museum.</p>
+                        <p>This project was the semester project, at the end of the first semester of Front End Development at Noroff.</p>
                         <p>The project was created using HTML, CSS and JavaScript.</p>
                         <div class="projectLinks">
-                            <a href="https://main--splendorous-unicorn-f120c1.netlify.app/" aria-label="Go to the deployed website">Live Demo</a>
-                            <a href="https://github.com/Eikhaugen/Semester-Project-1" aria-label="Go to project Github Repository">Learn More</a>
-                        </div>
+                            <div class="gradientBorder">
+                                <a href="https://main--splendorous-unicorn-f120c1.netlify.app/" aria-label="Go to the deployed website">Live Demo</a>
+                            </div>
+                            <div class="gradientBorder">
+                                <a href="https://github.com/Eikhaugen/Semester-Project-1" aria-label="Go to project Github Repository">Learn More</a>
+                            </div>
+                            </div>
                 </div>
             </div>
             <div class="project">
                     <img class="projectImageDesktop" src="assets/images/is-desktop.png" alt="Screenshot of Innovatech Solutions Blog">
                     <div class="projectDetails">
                         <h3>Innovatech Solutions Blog</h3>
-                        <p>This website serves as a blog for a fictitious company named Innovatech Solutions. It was developed as the final project exam for the second semester of the Front End Development program at Noroff School of Technology and Digital Media</p>
+                        <p>This website serves as a blog for a fictitious company named Innovatech Solutions. It was developed as the final project exam for the second semester of the Front End Development program at Noroffa</p>
                         <p>The project was created using HTML, CSS and JavaScript. It features full CRUD functionality, integrated with the Noroff API</p>
                         <div class="projectLinks">
+                            <div class="gradientBorder">
                             <a href="https://eikhaugen.github.io/FED1-Project-Exam-1/index.html" aria-label="Go to the deployed website">Live Demo</a>
-                            <a href="https://github.com/Eikhaugen/FED1-Project-Exam-1" aria-label="Go to project Github Repository">Learn More</a>
+                            </div>
+                            <div class="gradientBorder">
+                                <a href="https://github.com/Eikhaugen/FED1-Project-Exam-1" aria-label="Go to project Github Repository">Learn More</a>
+                            </div>
                         </div>
                 </div>
             </div>
@@ -84,37 +101,37 @@
             <div id="techStack">
                 <h2>My Tech Stack</h2>
                 <div id="techStackContainer">
-                    <div class="techStackGradientBorder">
+                    <div class="gradientBorder">
                         <div class="techStackItem ">
                             <img src="assets/images/html5-original.svg" alt="HTML5 logo"  aria-hidden="true">
                             <span>HTML</span>
                         </div>
                     </div>
-                    <div class="techStackGradientBorder">
+                    <div class="gradientBorder">
                         <div class="techStackItem ">
                             <img src="assets/images/css3-original.svg" alt="CSS3 logo"  aria-hidden="true">
                             <span>CSS</span>
                         </div>
                     </div>
-                    <div class="techStackGradientBorder">
+                    <div class="gradientBorder">
                         <div class="techStackItem ">
                             <img src="assets/images/javascript-original.svg" alt="JavaScript logo"  aria-hidden="true">
                             <span>JavaScript</span>
                         </div>
                     </div>
-                    <div class="techStackGradientBorder">
+                    <div class="gradientBorder">
                         <div class="techStackItem">
                             <img src="assets/images/python-original.svg" alt="Python logo"  aria-hidden="true">
                             <span>Python</span>
                         </div>
                     </div>
-                    <div class="techStackGradientBorder">
+                    <div class="gradientBorder">
                         <div class="techStackItem ">
                             <img src="assets/images/git-original.svg" alt="Git logo"  aria-hidden="true">
                             <span>Git</span>
                         </div>
                     </div>
-                    <div class="techStackGradientBorder">
+                    <div class="gradientBorder">
                         <div class="techStackItem ">
                             <img src="assets/images/figma-original.svg" alt="Figma logo"  aria-hidden="true">
                             <span>Figma</span>
@@ -132,7 +149,7 @@
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <textarea name="message" placeholder="Message" rows="3" required></textarea>
-                <div class="techStackGradientBorder">
+                <div class="gradientBorder">
                     <button class="contactFormBTN" type="submit" name="submit">Send</button>
                 </div>
             </form>
