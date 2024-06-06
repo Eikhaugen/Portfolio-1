@@ -400,6 +400,7 @@ nav a{
     padding: 10px;
     border-radius: 5px;
     width: 100%;
+    justify-content: space-between;
 }
 
 .contactBlurb{
