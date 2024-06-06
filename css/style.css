@@ -460,7 +460,7 @@ nav a{
     transition: 0.5s;
 }
 
-#aboutContainer, #projectsContainer{
+#aboutContainer, #projectsContainer, #contactContainer{
     width: 100%;
     max-width: 1440px;
 }
