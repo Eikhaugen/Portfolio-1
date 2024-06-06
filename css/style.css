@@ -222,7 +222,7 @@ nav li{
 nav a{
     text-decoration: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 #about{
@@ -240,12 +240,10 @@ nav a{
 #about h2{
     font-size: 1.5rem;
 }
-#about h3{
-    font-size: 1.25rem;
-}
 
 #about p{
     width: 100%;
+    font-size: 1.25rem;
 }
 
 #aboutContainer{
@@ -264,16 +262,10 @@ nav a{
 #techStack{
     width: 100%;
     display: flex;
-
     align-items: center;
-
     flex-direction: column;
     position: relative;
     gap: 16px;
-}
-
-#techStack h2{
-    font-size: 24px;
 }
 
 #techStackContainer{
@@ -328,7 +320,7 @@ nav a{
 }
 
 #projectsContainer h2{
-    font-size: 24px;
+    font-size: 2rem;
 }
 
 .project{
@@ -340,16 +332,10 @@ nav a{
     border-radius: 5px;
 }
 
-.project li{
-    margin-left: 20px;
-
-}
-
 .projectImageDesktop{
     width: 100%;
     max-width: 900px;
     border-radius: 5px;
-
 }
 
 .projectDetails{
@@ -360,8 +346,13 @@ nav a{
     padding: 16px;
 }
 
+.projectDetails h3{
+    font-size: 1.5rem;
+}
+
 .projectDetails p{
     width: 100%;
+    font-size: 1.25rem;
 }
 
 .projectLinks{
@@ -370,6 +361,7 @@ nav a{
     justify-content: center;
     align-items: center;
     gap: 64px;
+    font-size: 1.25rem
 }
 
 .projectLinks a{
@@ -440,7 +432,6 @@ nav a{
     background: rgba(9, 9, 9, 0.95);
     position: relative;
     border-radius: var(--borderWidth);
-
 }
 
 .gradient-border:hover{
@@ -538,7 +529,7 @@ nav a{
     }
 }
 
-@media screen and (min-width: 1100px){
+@media screen and (min-width: 1000px){
     #techStackContainer{
         grid-template-columns: repeat(3, 1fr);
     }
