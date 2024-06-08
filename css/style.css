@@ -346,8 +346,8 @@ nav a{
     grid-template-columns: 1fr;
     align-content: space-between;
     gap: 16px;
-    padding: 16px;
     height: 100%;
+    padding: 0 0 3px 0
 }
 
 .projectDetailsText{
@@ -396,7 +396,7 @@ nav a{
     background-color: rgba(9, 9, 9, 0.7);
 }
 
-#contactContainer {
+#contact {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
@@ -407,6 +407,23 @@ nav a{
     justify-content: space-between;
 }
 
+.contactContent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+#contact h2{
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+#contact p{
+    text-align: left;
+}
+
 .contactBlurb{
     display: flex;
     align-items: center;
@@ -414,21 +431,12 @@ nav a{
     gap: 16px;
 }
 
-#contactContainer h2{
-    font-size: 1.5rem;
-    width: 100%;
-}
-
-#contactContainer p{
-    text-align: left;
-}
-
 .formContainer{
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 16px;
-    padding: 16px
+    padding:  0 0 3px 0;
 }
 
 .formContainer form{
@@ -472,7 +480,7 @@ nav a{
     transition: 0.5s;
 }
 
-#aboutContainer, #projectsContainer, #contactContainer{
+#aboutContainer, #projectsContainer, #contact{
     width: 100%;
     max-width: 1440px;
 }
@@ -490,7 +498,7 @@ nav a{
     height: calc(100% + var(--borderWidth) * 2);
 }
 
-#aboutContent, #techStack, #contactContainer, .project{
+#aboutContent, #techStack, #contact, .project{
     padding: 10px;
 }
 
@@ -588,10 +596,9 @@ nav a{
         order: 1;
     }
 
-    #contactContainer{
+    #contact{
         grid-template-columns: 1fr 1fr;
         gap: 32px;
-        padding: 16px;
     }
 
 }
