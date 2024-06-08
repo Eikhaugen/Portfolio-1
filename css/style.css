@@ -1,3 +1,10 @@
+/*General Styles*/
+
+html{
+    scroll-padding-top: 60px;
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,6 +29,8 @@ body {
     align-items: center;
     overflow-x: hidden;
 }
+
+/*Hero*/
 
 #hero {
     width: 100%;
@@ -71,6 +80,315 @@ h1{
     padding-left: 12px;
     font-size: 1.25rem;
 }
+
+/*Nav*/
+
+nav{
+    background: #393939;
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+nav li{
+    list-style: none;
+    display: inline;
+    padding: 0 8px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/*Projects*/
+
+#projectsSection{
+    background: #1e1e1e;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 8px 16px 8px;
+}
+
+#projectsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 36px;
+}
+
+#projectsContainer h2{
+    font-size: 2rem;
+}
+
+.project{
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid #393939;
+    background: #333;
+    border-radius: 5px;
+    gap: 16px;
+}
+
+.projectImageDesktop{
+    width: 100%;
+    max-width: 900px;
+    border-radius: 5px;
+}
+
+.projectDetails{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: space-between;
+    gap: 16px;
+    height: 100%;
+    padding: 0 0 3px 0
+}
+
+.projectDetailsText{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.projectDetailsText h3{
+    font-size: 1.5rem;
+}
+
+.projectDetailsText p{
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+.projectLinks{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    align-self: end;
+}
+
+.projectLinks a{
+    color: white;
+    padding: 10px 20px;
+    background: rgba(30, 30, 30, 0.95);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    font-size: 1.25rem;
+    cursor: pointer;
+    pointer-events: visible;
+    width: 145px;
+}
+
+.projectLinks a:hover{
+    background-color: rgba(9, 9, 9, 0.7);
+}
+
+/*About*/
+
+#about{
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    padding: 16px 8px 16px 8px;
+    gap: 64px;
+}
+
+#about h2{
+    font-size: 1.5rem;
+}
+
+#about p{
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+#aboutContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+#aboutContent{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid #393939;
+    background: #333;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+#techStack{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    gap: 16px;
+}
+
+#techStackContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+}
+
+.techStackItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+    transition: 0.5s;
+    height: fit-content;
+    width: fit-content;
+    background: #1e1e1e;
+    padding: 2px 8px;
+}
+
+.techStackItem img{
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.techStackItem span{
+    width: 100px;
+    text-align: center;
+}
+
+#aboutContainer, #projectsContainer, #contact{
+    width: 100%;
+    max-width: 1440px;
+}
+
+
+#aboutContent, #techStack, #contact, .project{
+    padding: 10px;
+}
+
+.socialLinks{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+}
+.socialLinks i{
+    font-size: 3rem;
+}
+
+/*Contact*/
+
+#contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    border: 1px solid #393939;
+    background: #333;
+    border-radius: 5px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contactContent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+#contact h2{
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+#contact p{
+    text-align: left;
+}
+
+.contactBlurb{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    padding:  0 0 3px 0;
+}
+
+.formContainer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.formContainer form input, .formContainer form textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #393939;
+    resize: none;
+    color: #393939;
+}
+
+.contactFormBTN{
+    color: white;
+    padding: 10px 20px;
+    background: rgba(30, 30, 30, 0.95);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    font-size: 1.25rem;
+    cursor: pointer;
+    pointer-events: visible;
+    width: 145px;
+}
+
+.contactFormBTN:hover{
+    background: rgba(9, 9, 9, 0.7);
+    transition: 0.5s;
+}
+
+/*Animations*/
 
 .bg-animation {
     position: absolute;
@@ -201,291 +519,6 @@ h1{
     }
 }
 
-nav{
-    background: #393939;
-    height: 60px;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-}
-
-nav li{
-    list-style: none;
-    display: inline;
-    padding: 0 8px;
-}
-
-nav a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-}
-
-#about{
-    background: #1e1e1e;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-    width: 100%;
-    padding: 16px 8px 16px 8px;
-    gap: 64px;
-
-}
-
-#about h2{
-    font-size: 1.5rem;
-}
-
-#about p{
-    width: 100%;
-    font-size: 1.25rem;
-}
-
-#aboutContainer{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-}
-
-#aboutContent{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    border: 1px solid #393939;
-    background: #333;
-    padding: 16px;
-    border-radius: 5px;
-}
-
-#techStack{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    gap: 16px;
-}
-
-#techStackContainer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 32px;
-}
-
-.techStackItem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 4px;
-    transition: 0.5s;
-    height: fit-content;
-    width: fit-content;
-    background: #1e1e1e;
-    padding: 2px 8px;
-}
-
-.techStackItem img{
-    width: 80px;
-    height: 80px;
-    border-radius: 4px;
-    z-index: 2;
-}
-
-.techStackItem span{
-    width: 100px;
-    text-align: center;
-}
-
-#projectsSection{
-    background: #1e1e1e;
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 8px 16px 8px;
-}
-
-#projectsContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 36px;
-}
-
-#projectsContainer h2{
-    font-size: 2rem;
-}
-
-.project{
-    display: grid;
-    grid-template-columns: 1fr;
-    border: 1px solid #393939;
-    background: #333;
-    border-radius: 5px;
-    gap: 16px;
-}
-
-.projectImageDesktop{
-    width: 100%;
-    max-width: 900px;
-    border-radius: 5px;
-}
-
-.projectDetails{
-    display: grid;
-    grid-template-columns: 1fr;
-    align-content: space-between;
-    gap: 16px;
-    height: 100%;
-    padding: 0 0 3px 0
-}
-
-.projectDetailsText{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.projectDetailsText h3{
-    font-size: 1.5rem;
-}
-
-.projectDetailsText p{
-    width: 100%;
-    font-size: 1.25rem;
-}
-
-.projectLinks{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 32px;
-    align-self: end;
-}
-
-.projectLinks a{
-    color: white;
-    padding: 10px 20px;
-    background: rgba(30, 30, 30, 0.95);
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    font-size: 1.25rem;
-    cursor: pointer;
-    pointer-events: visible;
-    width: 145px;
-}
-
-.projectLinks a:hover{
-    background-color: rgba(9, 9, 9, 0.7);
-}
-
-#contact {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    border: 1px solid #393939;
-    background: #333;
-    border-radius: 5px;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.contactContent{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: space-between;
-}
-
-#contact h2{
-    font-size: 1.5rem;
-    width: 100%;
-}
-
-#contact p{
-    text-align: left;
-}
-
-.contactBlurb{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.formContainer{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 16px;
-    padding:  0 0 3px 0;
-}
-
-.formContainer form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    max-width: 450px;
-}
-
-.formContainer form input, .formContainer form textarea{
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #393939;
-    resize: none;
-    color: #393939;
-}
-
-.contactFormBTN{
-    color: white;
-    padding: 10px 20px;
-    background: rgba(30, 30, 30, 0.95);
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    font-size: 1.25rem;
-    cursor: pointer;
-    pointer-events: visible;
-    width: 145px;
-}
-
-.contactFormBTN:hover{
-    background: rgba(9, 9, 9, 0.7);
-    transition: 0.5s;
-}
-
-#aboutContainer, #projectsContainer, #contact{
-    width: 100%;
-    max-width: 1440px;
-}
-
 .gradientBorderHero{
     --borderWidth: 3px;
     background: rgba(9, 9, 9, 0.95);
@@ -497,20 +530,6 @@ nav a{
     background: rgba(9, 9, 9, 0.7);
     transition: 0.5s;
     height: calc(100% + var(--borderWidth) * 2);
-}
-
-#aboutContent, #techStack, #contact, .project{
-    padding: 10px;
-}
-
-.socialLinks{
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    width: 100%;
-}
-.socialLinks i{
-    font-size: 3rem;
 }
 
 .gradientBorderHero:after {
@@ -561,18 +580,16 @@ nav a{
         z-index: -1;
 }
 
+/*Media Queries*/
+
 @media screen and (min-width: 700px){
     nav{
         justify-content: end;
         padding-right: 32px;
     }
-    #projectsSection{
-        padding: 60px 32px 32px 32px;
+    #projectsSection, #about{
+        padding: 32px;
     }
-    #about{
-        padding: 32px 32px 32px 32px;
-    }
-
 }
 
 @media screen and (min-width: 900px){
