@@ -333,6 +333,7 @@ nav a{
     border: 1px solid #393939;
     background: #333;
     border-radius: 5px;
+    gap: 16px;
 }
 
 .projectImageDesktop{
