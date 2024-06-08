@@ -251,8 +251,6 @@ nav a{
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
-
-
 }
 
 #aboutContent{
@@ -344,18 +342,25 @@ nav a{
 }
 
 .projectDetails{
-    display: flex;
-    align-items: start;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: space-between;
     gap: 16px;
     padding: 16px;
+    height: 100%;
 }
 
-.projectDetails h3{
+.projectDetailsText{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.projectDetailsText h3{
     font-size: 1.5rem;
 }
 
-.projectDetails p{
+.projectDetailsText p{
     width: 100%;
     font-size: 1.25rem;
 }
@@ -366,6 +371,7 @@ nav a{
     align-items: center;
     flex-direction: column;
     gap: 32px;
+    align-self: end;
 }
 
 .projectLinks a{
