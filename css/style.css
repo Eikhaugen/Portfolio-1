@@ -337,6 +337,7 @@ nav a{
     align-items: center;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
 }
 
 .formContainer{
