@@ -334,7 +334,6 @@ nav a{
     grid-template-columns: 1fr;
     border: 1px solid #393939;
     background: #333;
-    padding: 10px;
     border-radius: 5px;
 }
 
@@ -394,10 +393,9 @@ nav a{
 #contactContainer {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px 32px;
+    gap: 32px;
     border: 1px solid #393939;
     background: #333;
-    padding: 10px;
     border-radius: 5px;
     width: 100%;
     justify-content: space-between;
@@ -424,6 +422,7 @@ nav a{
     align-items: center;
     flex-direction: column;
     gap: 16px;
+    padding: 16px
 }
 
 .formContainer form{
@@ -483,6 +482,20 @@ nav a{
     background: rgba(9, 9, 9, 0.7);
     transition: 0.5s;
     height: calc(100% + var(--borderWidth) * 2);
+}
+
+#aboutContent, #techStack, #contactContainer, .project{
+    padding: 10px;
+}
+
+.socialLinks{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+}
+.socialLinks i{
+    font-size: 3rem;
 }
 
 .gradientBorderHero:after {
